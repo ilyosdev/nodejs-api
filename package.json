@@ -1,0 +1,40 @@
+{
+  "name": "simple",
+  "version": "0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "migrate": "cd src && sequelize db:migrate",
+    "migrate:undo": "cd src && sequelize db:migrate:undo:all",
+    "seed": "cd src && sequelize db:seed:all",
+    "seed:undo": "cd src && sequelize db:seed:undo:all",
+    "start": "cd src && yarn nodemon server.js",
+    "setup": "cd src && NODE_ENV=test sequelize db:migrate",
+    "teardown": "cd src && NODE_ENV=test sequelize db:migrate:undo:all",
+    "test": "NODE_ENV=test yarn teardown && yarn setup && jest --colors --detectOpenHandles"
+  },
+  "author": "Mutai Mwiti",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.8.0",
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^1.18.10",
+    "pg": "^7.9.0",
+    "require-all": "^3.0.0",
+    "sequelize": "^5.21.2",
+    "sequelize-cli": "^5.4.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.5.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  }
+}

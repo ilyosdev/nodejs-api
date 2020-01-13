@@ -1,0 +1,26 @@
+
+# Dependency directories
+node_modules/
+# jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+
+# next.js build output
+# .next
+
+# ides
+.vscode
+.idea
+
+# lib
+# lib
+
+# DS_Store
+# .DS_Store
